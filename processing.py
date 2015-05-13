@@ -19,7 +19,7 @@ def StripBlock(s, w1 = '<pre', w2 = '</pre>'):
 	start with w1 and end with w2, and spans multiple lines
 	"""
 	return re.sub('^' + w1 + '((?!' + w1 + ').)*' + w2 + '$', '', s, 
-			flags = re.MULTILINE | re.S)
+			flags = re.MULTILINE | re.S) 
 
 def save_obj(obj, name ):
     with open(name + '.pkl', 'wb') as f:
